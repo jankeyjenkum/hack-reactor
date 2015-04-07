@@ -148,4 +148,50 @@ Overview
 
 Use Arrays if it doesn't make sense to have named properties or if you need elements to be ordered.
 
-Access & Assignment
+Iterations
+
+```javascript
+var e = [];
+e['new'] = 'element';
+e['0'] = 'value';
+for (var i in e) {
+  console.log(e[i])
+}
+```
+
+```javascript
+var iterateObject = {};
+
+iterateObject['one'] = 1;
+iterateObject['two'] = 2;
+iterateObject['three'] = 3;
+iterateObject['four'] = 4;
+iterateObject['five'] = 5;
+
+for (var index = 0; index > iterateObject.length; index++) {
+  console.log("Iterated Object: " + index);
+}
+```
+
+Functions
+- 'arguments' keyword
+- lives inside functions
+- gets the values of the arguments in the form of Array Object
+
+Looping
+Functions as Constructors
+
+
+```javascript
+// function that returns an Object
+function AnimalMaker(name) {
+  return {
+    speak: function() {
+      console.log("my name is ", name)
+    }
+  };
+};
+
+var animalNames = ['Sheep','Liger','Big Bird'];
+
+```
